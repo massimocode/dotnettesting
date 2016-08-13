@@ -1,0 +1,39 @@
+{
+    "version": "0.1.0",
+    "command": "dotnet",
+    "isShellCommand": true,
+    "args": [],
+    "tasks": [
+        {
+            "taskName": "test",
+            "args": [
+                "${workspaceRoot}\\project.json"
+            ],
+            "isBuildCommand": true,
+            "problemMatcher": {
+                "owner": "NUnit",
+                "severity": "warning",
+                "fileLocation": [
+                    "absolute"
+                ],
+                "pattern": [
+                    {
+                        "regexp": "^\\d+\\) Failed : (.*)$",
+                        "message": 1
+                    },
+                    {
+                        "regexp": "^(.*)$"
+                    },
+                    {
+                        "regexp": "^(.*)$"
+                    },
+                    {
+                        "regexp": "^at (.*\\(\\)) in (.*):line (\\d+)$",
+                        "location": 3,
+                        "file": 2
+                    }
+                ]
+            }
+        }
+    ]
+}
