@@ -9,11 +9,11 @@ public class CalculatorSpec {
 
   [Test]
   public void ShouldFail() {
-    Assert.AreEqual(3, new Calculator().Add(1, 2));
+    Assert.AreEqual(0, new Calculator().Add(1, 2));
   }
 
   [Test]
   public void Will_Fail() {
-    Assert.AreEqual(3, new Calculator().Add(1, 2));
+    Assert.AreEqual(0, new Calculator().Add(1, 2));
   }
 }
